@@ -9,7 +9,7 @@
 
 body {
     background: #1f242d;
-    overflow: hidden;
+    overflow-x: hidden; 
     color: white;
 }
 
@@ -55,12 +55,11 @@ a {
 .navbar ul li.active a {
     color: #7cf03d;
 }
-
 .home {
     display: flex;
     align-items: center;
     height: 100vh;
-    padding: 60px 9% 0;
+    padding: 110px 9% 0; 
 }
 
 .home-info h1 {
@@ -123,7 +122,7 @@ a {
 }
 
 .home-img {
-    margin-top: -80px;
+    margin-top: -30px; 
 }
 
 .home-img .img-box {
@@ -137,6 +136,7 @@ a {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s; 
 }
 
 .home-img .img-box img {
@@ -158,6 +158,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
+    position: relative; 
 }
 
 .about-section::after {
@@ -213,8 +214,37 @@ a {
     color: white;
     font-weight: 500;
 }
+@media (max-width: 991px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+    .home {
+        padding: 100px 5% 0;
+        flex-direction: column-reverse; 
+        justify-content: center;
+        text-align: center;
+    }
+    .home-img .img-box {
+        width: 50vw;
+        height: 50vw;
+        margin-bottom: 30px;
+    }
+    .home-info {
+        margin-top: 20px;
+    }
+    .home-info h1 {
+        font-size: 40px;
+    }
+}
 
 @media (max-width: 768px) {
+    .navbar .logo {
+        font-size: 25px;
+    }
+    .navbar ul {
+        display: none; 
+    }
+    
     .about-container {
         justify-content: center;
         padding: 0 5%;
